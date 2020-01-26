@@ -22,6 +22,7 @@ public class ProjectileScript : MonoBehaviour
     }
     public void Direction(string dir)
     {
+        Debug.Log(dir);
         Vector2 spd = new Vector2();
         switch(dir)
         {

@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     }
     //Animation
     public Animator animator;
-    float originalPos = 0;
-    private float floatStrength = 0.002f;
 
     //Movement
     Vector2 movement;
@@ -156,7 +154,6 @@ public class PlayerController : MonoBehaviour
         Element = "";
         it = null;
         Item = null;
-        originalPos = 0;
         TimerStart(pickupTimer, 0.8f);
     }
 
@@ -175,24 +172,20 @@ public class PlayerController : MonoBehaviour
     private void setItemPosition()
     {
 
-        if (movement.y >= .1f && movement.x == 0 && originalPos != .3f)
+        if (movement.y >= .1f && movement.x == 0)
         {
             Item.localPosition = new Vector3(0, .3f, 1f);
-            originalPos = .3f;
         }
-        else if (movement.y <= -.1 && movement.x == 0 && originalPos != -.3f)
+        else if (movement.y <= -.1 && movement.x == 0)
         {
             Item.localPosition = new Vector3(0, -.3f, 1f);
-            originalPos = -.3f;
         }
-        else if ((movement.x <= -.1 || movement.x >= .1f) && originalPos != 0.1f)
+        else if ((movement.x <= -.1 || movement.x >= .1f))
         {
             Item.localPosition = new Vector3(.4f, 0, 1f);
-            originalPos = 0.4f;
         }
 
-
-        Item.transform.position = new Vector3(Item.position.x, Item.position.y + ((float)Mathf.Sin(Time.time) * floatStrength), 1f);
+        Item.transform.position = new Vector3(Item.position.x, Item.position.y, 1f);
     }
 
     private void TimerStart(Timer timer, float t)
@@ -201,18 +194,15 @@ public class PlayerController : MonoBehaviour
     }
     private string calcLocalPos()
     {
-        Vector3 localPos = Item.localPosition - transform.position;
+        Vector3 localPos = Item.localPosition;
 
-        if (localPos.x < 0)
-            return "left";
-        else if (localPos.x > 0)
-            return "right";
+        if (localPos.y > 0)
+            return "up";
         else if (localPos.y < 0)
             return "down";
-        else if (localPos.y > 0)
-            return "up";
-        else
-            return "none";
+        else if (localPos.z == -1)
+            return "left";
+        else return "right";
     }
     public void QuitGame()
     {
