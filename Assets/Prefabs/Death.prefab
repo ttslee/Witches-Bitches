@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3225794335417814522}
   - component: {fileID: 3225794335417814523}
   - component: {fileID: 3225794335417814520}
-  - component: {fileID: 3225794335417814521}
+  - component: {fileID: 4101997279073899885}
   - component: {fileID: 3225794335417814526}
   m_Layer: 0
   m_Name: Death
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: -0.027871788, y: -0.023890138}
   serializedVersion: 2
   m_Radius: 0.15885592
---- !u!50 &3225794335417814521
+--- !u!50 &4101997279073899885
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -108,14 +108,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3225794335417814527}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  rb: {fileID: 3225794335417814521}
+  rb: {fileID: 4101997279073899885}
