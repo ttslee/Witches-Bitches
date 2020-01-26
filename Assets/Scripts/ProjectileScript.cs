@@ -6,7 +6,6 @@ public class ProjectileScript : MonoBehaviour
 {
     private string parent;
     
-    public float speed = 0f;
     public Rigidbody2D rb;
 
     private void Start()
@@ -20,8 +19,11 @@ public class ProjectileScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        //if(hitInfo.name != parent && hitInfo.gameObject.tag != "Item")
-            //Destroy(gameObject);
+        if (hitInfo.name != parent && hitInfo.gameObject.tag != "Item")
+        {
+            Destroy(hitInfo.gameObject);
+            Destroy(gameObject);
+        }
     }
     public void SetProjectile(string p, string dir)
     {
@@ -35,16 +37,16 @@ public class ProjectileScript : MonoBehaviour
         switch(dir)
         {
             case "up":
-                spd.Set(0, speed);
+                spd.Set(0, 10);
                 break;
             case "down":
-                spd.Set(0, -speed);
+                spd.Set(0, -10);
                 break;
             case "left":
-                spd.Set(-speed, 0);
+                spd.Set(-10, 0);
                 break;
             case "right":
-                spd.Set(speed, 0);
+                spd.Set(10, 0);
                 break;
         }
         rb.velocity = spd;
