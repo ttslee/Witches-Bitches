@@ -7,12 +7,11 @@ public class ProjectileScript : MonoBehaviour
     private string parent;
     
     public float speed = 20f;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
     }
 
     private void FixedUpdate()
@@ -34,6 +33,7 @@ public class ProjectileScript : MonoBehaviour
     }
     public void Direction(string dir)
     {
+        print("DIRECTION!!!");
         Vector2 spd = new Vector2();
         switch(dir)
         {
