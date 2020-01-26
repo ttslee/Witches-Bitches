@@ -78,15 +78,15 @@ public class PlayerController : MonoBehaviour
         switch(player)
         {
             case 1:
-                if (Input.GetKey(KeyCode.E) && IsHoldingItem)
+                if (Input.GetKeyDown(KeyCode.E) && IsHoldingItem)
                     Drop();
-                else if (Input.GetKey(KeyCode.Q) && hasElement && canShoot)
+                else if (Input.GetKeyDown(KeyCode.Q) && hasElement && canShoot)
                     Shoot();
                 break;
             case 2:
-                if (Input.GetKey(KeyCode.RightShift) && IsHoldingItem)
+                if (Input.GetKeyDown(KeyCode.RightShift) && IsHoldingItem)
                     Drop();
-                else if (Input.GetKey(KeyCode.RightControl) && hasElement && canShoot)
+                else if (Input.GetKeyDown(KeyCode.RightControl) && hasElement && canShoot)
                     Shoot();
                 break;
         }
@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
 
     private void TimerStart(Timer timer, float t)
     {
-        timer.SetTime(0.8f, "Player");
+        timer.SetTime(t, "Player");
     }
     private string calcLocalPos()
     {
@@ -223,13 +223,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Element == "FireElement")
         {
-            Instantiate(Fire, Item.position, Item.rotation);
-            Fire.GetComponent<ProjectileScript>().SetProjectile((player == 1) ? "Player1" : "Player2", calcLocalPos());
+            GameObject F = Instantiate(Fire, Item.position, Item.rotation);
+            F.GetComponent<ProjectileScript>().SetProjectile((player == 1) ? "Player1" : "Player2", calcLocalPos());
         }  
         else
         {
-            Instantiate(Death, Item.position, Item.rotation);
-            Death.GetComponent<ProjectileScript>().SetProjectile((player == 1) ? "Player1" : "Player2", calcLocalPos());
+            GameObject D = Instantiate(Death, Item.position, Item.rotation);
+            D.GetComponent<ProjectileScript>().SetProjectile((player == 1) ? "Player1" : "Player2", calcLocalPos());
         }
         canShoot = false;
         TimerStart(shootTimer, 1.0f);

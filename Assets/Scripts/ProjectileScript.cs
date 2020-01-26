@@ -12,13 +12,14 @@ public class ProjectileScript : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void FixedUpdate()
     {
-        Vector2 spd = new Vector2();
-        spd.Set(20, 0);
-        rb.velocity = spd;
+        //Vector2 spd = new Vector2();
+        //spd.Set(20, 0);
+        //rb.velocity = spd;
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
