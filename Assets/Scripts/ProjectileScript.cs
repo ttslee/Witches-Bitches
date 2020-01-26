@@ -7,8 +7,19 @@ public class ProjectileScript : MonoBehaviour
     private string parent;
     
     public float speed = 20f;
-    public Rigidbody2D rb;
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector2 spd = new Vector2();
+        spd.Set(20, 0);
+        rb.velocity = spd;
+    }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
@@ -22,7 +33,6 @@ public class ProjectileScript : MonoBehaviour
     }
     public void Direction(string dir)
     {
-        Debug.Log(dir);
         Vector2 spd = new Vector2();
         switch(dir)
         {
