@@ -58,7 +58,7 @@ public class CauldronScript : MonoBehaviour
     // Start is called before the first frame update
 
     //Animator
-    public Animator animator;
+    //public Animator animator;
     void Start()
     {
         timer = gameObject.GetComponent<Timer>();
