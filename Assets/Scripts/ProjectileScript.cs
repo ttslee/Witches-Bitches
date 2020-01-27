@@ -19,11 +19,10 @@ public class ProjectileScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.name != parent && hitInfo.gameObject.tag != "Item")
-        {
+        if(hitInfo.CompareTag("Resource"))
             Destroy(hitInfo.gameObject);
+        if (hitInfo.name != parent && hitInfo.gameObject.tag != "Item")
             Destroy(gameObject);
-        }
     }
     public void SetProjectile(string p, string dir)
     {

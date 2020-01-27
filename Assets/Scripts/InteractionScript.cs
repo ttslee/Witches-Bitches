@@ -23,7 +23,7 @@ public class InteractionScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        switch(collision.gameObject.name)
+        switch(collision.gameObject.tag)
         { 
             case "Player1":
             case "Player2":
@@ -32,9 +32,8 @@ public class InteractionScript : MonoBehaviour
                 break;
             case "Fire":
             case "Death":
-                itemSpawn.GetComponent<SpriteRenderer>().sprite = (collision.gameObject.name == "Fire") ? itemFire : itemDeath;
-                itemSpawn.GetComponent<SpriteRenderer>().enabled = true;
-                itemSpawn.GetComponent<CircleCollider2D>().enabled = true;
+                GameObject nItem = Instantiate(itemSpawn, transform.position, transform.rotation);
+                nItem.GetComponent<SpriteRenderer>().sprite = (collision.gameObject.name == "Fire") ? itemFire : itemDeath;
                 Destroy(gameObject);
                 break;
                
