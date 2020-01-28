@@ -196,7 +196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipe: []
-  animator: {fileID: 0}
 --- !u!114 &8374110587081446757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 8305303301346973316, guid: 283c2314bf006f54087be15db9ca945d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8305303301346973316, guid: 283c2314bf006f54087be15db9ca945d,
         type: 3}
