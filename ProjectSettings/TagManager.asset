@@ -12,6 +12,7 @@ TagManager:
   - Death
   - Wall
   - Resource
+  - ShowOnPause
   layers:
   - Default
   - TransparentFX
