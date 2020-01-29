@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     //GameObject[] pauseObjects;
-    GameObject mainCam;
-    GameObject pCam;
+    public GameObject mainCam;
+    public GameObject pCam;
     // Use this for initialization
     void Start()
     {
         Time.timeScale = 1;
         //pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera");
-        pCam = GameObject.FindGameObjectWithTag("PauseCam");
         //print(pauseObjects[0].name);
         hidePaused();
     }
