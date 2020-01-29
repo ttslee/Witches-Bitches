@@ -410,7 +410,7 @@ PrefabInstance:
     - target: {fileID: 5933460433773859296, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5933460433773859296, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
         type: 3}
@@ -580,9 +580,10 @@ PrefabInstance:
     - target: {fileID: 5009898504039763838, guid: a8dffd41c79296c42942385f5fbe7231,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1132662995220699340, guid: a8dffd41c79296c42942385f5fbe7231, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8dffd41c79296c42942385f5fbe7231, type: 3}
 --- !u!4 &1389629871 stripped
 Transform:
@@ -754,7 +755,7 @@ PrefabInstance:
     - target: {fileID: 7282587976910265611, guid: 1da9d4a7b1983404f8dbaefe0b43d54f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7282587976910265611, guid: 1da9d4a7b1983404f8dbaefe0b43d54f,
         type: 3}
@@ -1729,6 +1730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MonsterManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601281817173133458, guid: 5408ff965388d0a4486910366fe0bc8a,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5408ff965388d0a4486910366fe0bc8a, type: 3}
