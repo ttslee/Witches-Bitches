@@ -519,6 +519,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2224f2bdf1257274fb94b887240a2088, type: 3}
+--- !u!1 &800946795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8977153056491811533, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5295219136535909612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &817456801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1472,6 +1478,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94610cb538aa2364bb09edff0e13b463, type: 3}
+--- !u!1 &1285839548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3478163023067682885, guid: a8dffd41c79296c42942385f5fbe7231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1902660247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1339071228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1666,6 +1678,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3440800971072176948, guid: 1da9d4a7b1983404f8dbaefe0b43d54f,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 1285839548}
+    - target: {fileID: 3440800971072176948, guid: 1da9d4a7b1983404f8dbaefe0b43d54f,
+        type: 3}
+      propertyPath: pCam
+      value: 
+      objectReference: {fileID: 800946795}
     - target: {fileID: 7282587976910265611, guid: 1da9d4a7b1983404f8dbaefe0b43d54f,
         type: 3}
       propertyPath: m_LocalPosition.x

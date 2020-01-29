@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
-    //GameObject[] pauseObjects;
+    GameObject[] pauseObjects;
     public GameObject mainCam;
     public GameObject pCam;
     // Use this for initialization
     void Start()
     {
         Time.timeScale = 1;
-        //pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+        pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         //print(pauseObjects[0].name);
         hidePaused();
     }
@@ -52,10 +52,10 @@ public class PauseManager : MonoBehaviour
     //shows objects with ShowOnPause tag
     public void showPaused()
     {
-        //foreach (GameObject g in pauseObjects)
-        //{
-        //    g.SetActive(true);
-        //}
+        foreach (GameObject g in pauseObjects)
+        {
+            g.SetActive(true);
+        }
         pCam.SetActive(true);
         mainCam.SetActive(false);
     }
@@ -63,10 +63,10 @@ public class PauseManager : MonoBehaviour
     //hides objects with ShowOnPause tag
     public void hidePaused()
     {
-        //foreach (GameObject g in pauseObjects)
-        //{
-        //    g.SetActive(false);
-        //}
+        foreach (GameObject g in pauseObjects)
+        {
+            g.SetActive(false);
+        }
         pCam.SetActive(false);
         mainCam.SetActive(true);
     }
@@ -90,6 +90,6 @@ public class PauseManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Main");
     }
 }

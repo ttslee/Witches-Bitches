@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3478163023067682887}
   - component: {fileID: 3478163023067682884}
   - component: {fileID: 3478163023067682881}
-  - component: {fileID: 1132662995220699340}
   m_Layer: 0
   m_Name: MultiTarget Cam
   m_TagString: MainCamera
@@ -110,15 +109,3 @@ MonoBehaviour:
   minSize: 5
   maxSize: 12
   zoomDelay: 12
---- !u!114 &1132662995220699340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3478163023067682885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f2e5f3bf7ba1d4e921844812d5d6e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

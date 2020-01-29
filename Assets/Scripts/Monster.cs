@@ -57,7 +57,7 @@ public class Monster : MonoBehaviour
 
     //Timer
     private Timer timer;
-    private float waitTime = 10f;
+    private float waitTime = 25f;
     // Start is called before the first frame update
 
     //Animator

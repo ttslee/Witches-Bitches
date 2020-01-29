@@ -54,7 +54,7 @@ public class CauldronScript : MonoBehaviour
 
     //Timer
     private Timer timer;
-    private float waitTime = 90f;
+    private float waitTime = 120f;
     // Start is called before the first frame update
 
     //Animator

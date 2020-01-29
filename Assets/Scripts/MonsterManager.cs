@@ -80,7 +80,7 @@ public class MonsterManager : MonoBehaviour
     }
     // ManagerTimer
     private Timer timer;
-    private float rDelay = 5f;
+    private float rDelay = 10f;
 
     // Monster Management
     private static List<string> mList = new List<string>{ "Monster1", "Monster2", "Monster3" };
