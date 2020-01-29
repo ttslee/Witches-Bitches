@@ -12,6 +12,7 @@ TagManager:
   - Death
   - Wall
   - Resource
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

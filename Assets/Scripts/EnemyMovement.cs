@@ -9,6 +9,10 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpd = 1f;
     public float stoppingDistance;
     public bool isWandering = false;
+    public bool canShoot = false;
+    public float fireRate = 5f;
+    public Timer shootTimer;
+    public GameObject projectilePrefab;
     public Animator animator;
     public Transform moveSpot;
     private float wait;
@@ -45,6 +49,15 @@ public class EnemyMovement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
         transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, moveSpd * Time.deltaTime);
+        if (canShoot && shootTimer.Done)
+        {
+            GameObject bullet = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            Transform target = GetClosestTarget(players[0], players[1]);
+            Vector2 targetDirection = (target.transform.position - bullet.transform.position).normalized * 5;
+            rb.velocity = new Vector2(targetDirection.x, targetDirection.y);
+            shootTimer.SetTime(fireRate, "");
+        }
         if (Vector2.Distance(transform.position, moveSpot.position) < 0.2f)
         {
             if (wait <= 0)

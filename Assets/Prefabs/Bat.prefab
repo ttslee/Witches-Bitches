@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7005519853363227103}
   - component: {fileID: 3374078604080953323}
   - component: {fileID: 1360106433050244234}
+  - component: {fileID: 7576872047213560198}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Resource
@@ -227,7 +228,12 @@ MonoBehaviour:
   players: []
   moveSpd: 1
   stoppingDistance: 3
-  isWandering: 0
+  isWandering: 1
+  canShoot: 1
+  fireRate: 3
+  shootTimer: {fileID: 7576872047213560198}
+  projectilePrefab: {fileID: 7184593217316701058, guid: e3468935cf0d480499820ec669f1e4e6,
+    type: 3}
   animator: {fileID: 5696700921488467981}
   moveSpot: {fileID: 0}
   waitTime: 2
@@ -253,3 +259,15 @@ MonoBehaviour:
     type: 3}
   itemDeath: {fileID: -2821042892349479055, guid: 6db934f5df123ce438fcc3e1111fb1d7,
     type: 3}
+--- !u!114 &7576872047213560198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696700921488467978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be1da405eb97c14ea995db35fea5de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
