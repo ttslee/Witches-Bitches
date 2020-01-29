@@ -4,15 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Player1
-  - Player2
-  - Item
-  - Monster
-  - Fire
-  - Death
-  - Wall
   - Resource
-  - ShowOnPause
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -47,12 +40,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Ground
-    uniqueID: 215362671
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UI
-    uniqueID: 1398407649
     locked: 0
