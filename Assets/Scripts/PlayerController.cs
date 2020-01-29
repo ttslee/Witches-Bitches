@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
         if (Input.GetKey(KeyCode.Escape))
             QuitGame();
         movement.x = Input.GetAxisRaw(horizontal);

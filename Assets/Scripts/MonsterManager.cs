@@ -91,7 +91,6 @@ public class MonsterManager : MonoBehaviour
         // Fill Dictionary of Items
         foreach (var item in sprites)
         {
-            print(item.name);
             spriteDictionary.Add(item.name, item.image);
         }
 
