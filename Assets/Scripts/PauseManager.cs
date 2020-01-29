@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
-    GameObject[] pauseObjects;
-
+    //GameObject[] pauseObjects;
+    GameObject mainCam;
+    GameObject pCam;
     // Use this for initialization
     void Start()
     {
         Time.timeScale = 1;
-        pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        print(pauseObjects[0].name);
+        //pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera");
+        pCam = GameObject.FindGameObjectWithTag("PauseCam");
+        //print(pauseObjects[0].name);
         hidePaused();
     }
 
@@ -51,24 +54,44 @@ public class PauseManager : MonoBehaviour
     //shows objects with ShowOnPause tag
     public void showPaused()
     {
-        foreach (GameObject g in pauseObjects)
-        {
-            g.SetActive(true);
-        }
+        //foreach (GameObject g in pauseObjects)
+        //{
+        //    g.SetActive(true);
+        //}
+        pCam.SetActive(true);
+        mainCam.SetActive(false);
     }
 
     //hides objects with ShowOnPause tag
     public void hidePaused()
     {
-        foreach (GameObject g in pauseObjects)
-        {
-            g.SetActive(false);
-        }
+        //foreach (GameObject g in pauseObjects)
+        //{
+        //    g.SetActive(false);
+        //}
+        pCam.SetActive(false);
+        mainCam.SetActive(true);
     }
 
     //loads inputted level
     public void LoadLevel(string level)
     {
         //Application.LoadLevel(level);
+    }
+    public void QuitGame()
+    {
+        // save any game data here
+        #if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(2);
     }
 }

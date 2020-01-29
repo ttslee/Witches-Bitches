@@ -31,6 +31,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
         if (isWandering)
         {
             Wander();

@@ -184,8 +184,8 @@ public class MonsterManager : MonoBehaviour
 
     private void WakeUpMonster(int monster_num)
     {
-        mAvailableList.Remove(monster_num);
         gameObject.transform.Find(mList[monster_num]).GetComponent<Monster>().WakeUp(MyRecipes[count].items, mList[monster_num], monster_num);  // Wakes up a monster and sends it a recipe to complete. 
+        mAvailableList.Remove(monster_num);
         count++;
         timer.SetTime(rDelay, "MonsterManager");
     }

@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Resource
   - EnemyProjectile
+  - Player1
+  - Death
+  - Wall
+  - Fire
+  - Item
+  - Monster
+  - ShowOnPause
+  - Player2
+  - PauseCam
   layers:
   - Default
   - TransparentFX
