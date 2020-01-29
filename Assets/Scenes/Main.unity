@@ -371,7 +371,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1691828457}
+      objectReference: {fileID: 0}
     - target: {fileID: 5295219135179946454, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -381,6 +381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295219135179946459, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
+        type: 3}
+      propertyPath: m_TagString
+      value: ShowOnPause
       objectReference: {fileID: 0}
     - target: {fileID: 5295219135948897956, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
         type: 3}
@@ -392,6 +397,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 5295219135948897961, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
+        type: 3}
+      propertyPath: m_TagString
+      value: ShowOnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295219136750110242, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
+        type: 3}
+      propertyPath: m_TagString
+      value: ShowOnPause
+      objectReference: {fileID: 0}
     - target: {fileID: 5295219136750110269, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -401,6 +416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: hidePaused
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295219136817980950, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
+        type: 3}
+      propertyPath: m_TagString
+      value: ShowOnPause
       objectReference: {fileID: 0}
     - target: {fileID: 5933460433773859296, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
         type: 3}
@@ -805,6 +825,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725088539525836501, guid: 1da9d4a7b1983404f8dbaefe0b43d54f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1da9d4a7b1983404f8dbaefe0b43d54f, type: 3}
@@ -1545,12 +1570,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77fb10a102593fe408348ba91557472b, type: 3}
---- !u!20 &1691828457 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3830294822538652523, guid: 99bac10c4d7ad6044919cd9d68d24fc3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1182850458}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1853034265
 PrefabInstance:
   m_ObjectHideFlags: 0
