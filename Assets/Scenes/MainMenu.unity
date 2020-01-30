@@ -516,8 +516,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: e6a71e196681ee745a0506ea95f1f138,
+      objectReference: {fileID: 4296805022055077042, guid: 0d01e464ec3ae0048b3731ba45252d75,
         type: 3}
+    - target: {fileID: 1716477498201593692, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1716477497320110103, guid: 428a8205724743144bcffdf207ecc3bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 428a8205724743144bcffdf207ecc3bd, type: 3}
