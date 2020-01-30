@@ -27,13 +27,7 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-
-    //Reloads the Level
-    public void Reload()
-    {
-        //Application.LoadLevel(Application.loadedLevel);
-    }
-
+    
     //controls the pausing of the scene
     public void pauseControl()
     {
@@ -73,11 +67,6 @@ public class PauseManager : MonoBehaviour
         mainCam.SetActive(true);
     }
 
-    //loads inputted level
-    public void LoadLevel(string level)
-    {
-        //Application.LoadLevel(level);
-    }
     public void QuitGame()
     {
         // save any game data here
