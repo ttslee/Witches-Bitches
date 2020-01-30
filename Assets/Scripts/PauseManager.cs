@@ -52,6 +52,7 @@ public class PauseManager : MonoBehaviour
     //shows objects with ShowOnPause tag
     public void showPaused()
     {
+        Time.timeScale = 0;
         foreach (GameObject g in pauseObjects)
         {
             g.SetActive(true);
@@ -63,6 +64,7 @@ public class PauseManager : MonoBehaviour
     //hides objects with ShowOnPause tag
     public void hidePaused()
     {
+        Time.timeScale = 1;
         foreach (GameObject g in pauseObjects)
         {
             g.SetActive(false);
