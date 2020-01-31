@@ -8,7 +8,6 @@ public class MenuOptions : MonoBehaviour
     // Start is called before the first frame update
     public void Play()
     {
-        print("HERERREER");
         //GameObject.FindGameObjectWithTag("MainCamera").SetActive(false);
         SceneManager.LoadScene("Main");
     }

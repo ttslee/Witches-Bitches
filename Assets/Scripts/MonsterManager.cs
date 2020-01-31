@@ -40,7 +40,6 @@ public class MonsterManager : MonoBehaviour
             "blue potion",
             "green potion",
             "purple potion",
-            "orange potion",
     };
     private static List<string> itemList1 = new List<string> 
     {

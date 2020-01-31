@@ -618,6 +618,11 @@ PrefabInstance:
       propertyPath: players.Array.data[1]
       value: 
       objectReference: {fileID: 1389629871}
+    - target: {fileID: 3478163023067682881, guid: a8dffd41c79296c42942385f5fbe7231,
+        type: 3}
+      propertyPath: themeSong
+      value: 
+      objectReference: {fileID: 8300000, guid: a9d46bc0416c5004c843c9c87d617a17, type: 3}
     - target: {fileID: 3478163023067682885, guid: a8dffd41c79296c42942385f5fbe7231,
         type: 3}
       propertyPath: m_Name
@@ -699,7 +704,7 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1132662995220699340, guid: a8dffd41c79296c42942385f5fbe7231, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a8dffd41c79296c42942385f5fbe7231, type: 3}
 --- !u!4 &1389629871 stripped
 Transform:

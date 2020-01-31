@@ -15,9 +15,11 @@ public class MultiTargetCamera : MonoBehaviour
     private Vector3 velocity;
     private Camera cam;
 
+    public AudioClip themeSong;
     private void Start()
     {
         cam = GetComponent<Camera>();
+        SoundManager.Instance.PlayMusic(themeSong);
     }
 
 
