@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     public Timer shootTimer;
     public GameObject projectilePrefab;
     public Animator animator;
-    public Transform moveSpot;
+    public static Transform moveSpot;
     private float wait;
     public float waitTime = 2f;
     public float minX = -9.5f;

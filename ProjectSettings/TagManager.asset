@@ -15,6 +15,9 @@ TagManager:
   - ShowOnPause
   - Player2
   - PauseCam
+  - Bat
+  - Rat
+  - Skeleton
   layers:
   - Default
   - TransparentFX
