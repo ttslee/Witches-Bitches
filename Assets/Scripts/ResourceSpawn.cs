@@ -42,20 +42,17 @@ public class ResourceSpawn : MonoBehaviour
             int rand = Random.Range(0, 5);
             if (num_bat < 1)
             {
-                GameObject b = Instantiate(Bat, spawnPositions[rand].transform);
-                EnemyMovement.moveSpot = spawnPositions[rand];
+                GameObject b = Instantiate(Bat, spawnPositions[rand].transform.position, Quaternion.identity);
                 num_bat += 1;
             }
             else if (num_rat < 1)
             {
-                GameObject r = Instantiate(Rat, spawnPositions[rand].transform);
-                EnemyMovement.moveSpot = spawnPositions[rand];
+                GameObject r = Instantiate(Rat, spawnPositions[rand].transform.position, Quaternion.identity);
                 num_rat += 1;
             }
              else if (num_skeleton < 1)
             {
-                GameObject s = Instantiate(Skeleton, spawnPositions[rand].transform);
-                EnemyMovement.moveSpot = spawnPositions[rand];
+                GameObject s = Instantiate(Skeleton, spawnPositions[rand].transform.position, Quaternion.identity);
                 num_skeleton += 1;
             }
             yield return new WaitForSeconds(2);

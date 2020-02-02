@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     public Timer shootTimer;
     public GameObject projectilePrefab;
     public Animator animator;
-    public static Transform moveSpot;
+    public Vector3 moveSpot;
     private float wait;
     public float waitTime = 2f;
     public float minX = -9.5f;
@@ -26,7 +26,11 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         wait = waitTime;
-        moveSpot.position = CreateMoveSpot();
+        moveSpot = CreateMoveSpot();
+        Transform player1 = GameObject.Find("Player1").transform;
+        Transform player2 = GameObject.Find("Player2").transform;
+        players[0] = player1;
+        players[1] = player2;
     }
 
     void Update()
@@ -42,15 +46,15 @@ public class EnemyMovement : MonoBehaviour
 
     void Wander()
     {
-        if (transform.position.x > moveSpot.position.x)
+        if (transform.position.x > moveSpot.x)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
-        else if (transform.position.x < moveSpot.position.x)
+        else if (transform.position.x < moveSpot.x)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
-        transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, moveSpd * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, moveSpot, moveSpd * Time.deltaTime);
         if (canShoot && shootTimer.Done)
         {
             GameObject bullet = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
@@ -60,11 +64,11 @@ public class EnemyMovement : MonoBehaviour
             rb.velocity = new Vector2(targetDirection.x, targetDirection.y);
             shootTimer.SetTime(fireRate, "");
         }
-        if (Vector2.Distance(transform.position, moveSpot.position) < 0.2f)
+        if (Vector2.Distance(transform.position, moveSpot) < 0.2f)
         {
             if (wait <= 0)
             {
-                moveSpot.position = CreateMoveSpot();
+                moveSpot = CreateMoveSpot();
                 wait = waitTime;
                 animator.SetFloat("Speed", 1f);
             } else
@@ -98,9 +102,9 @@ public class EnemyMovement : MonoBehaviour
         return Vector2.Distance(object1.transform.position, object2.transform.position); 
     }
 
-    Vector2 CreateMoveSpot()
+    Vector3 CreateMoveSpot()
     {
-        return new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        return new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
     }
 
 
