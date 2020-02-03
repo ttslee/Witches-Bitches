@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    public GameObject potion;
+    private Sprite potionSprite;
     //Monster info
     private int monster_num;
 
@@ -107,8 +109,9 @@ public class Monster : MonoBehaviour
         }
     }
 
-    public void WakeUp(List<string> r, string nm, int mNum)
+    public void WakeUp(List<string> r, string nm, int mNum, string potionName, Dictionary<string, Sprite> spriteDictionary)
     {
+        potionSprite = spriteDictionary[potionName];
         monster_num = mNum;
         recipe = r;
         HasRecipe = true;

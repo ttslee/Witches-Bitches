@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2230329273480335483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5586863272661124822}
+  m_Layer: 0
+  m_Name: Potion Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5586863272661124822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230329273480335483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5601281817850015910}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5587282231628581200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784997557031159288}
+  m_Layer: 0
+  m_Name: Potion Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784997557031159288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5587282231628581200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5601281816869873717}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5601281816007214372
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +579,7 @@ Transform:
   - {fileID: 5601281817498456529}
   - {fileID: 5601281817608173837}
   - {fileID: 5601281816494520778}
+  - {fileID: 784997557031159288}
   m_Father: {fileID: 5601281817065387377}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -619,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc81dbc4d2ba812449f697c05a8cb8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potion: {fileID: 0}
   recipe: []
   animator: {fileID: 5601281816869873711}
 --- !u!114 &5601281816869873706
@@ -860,7 +922,7 @@ GameObject:
   - component: {fileID: 5601281817065387389}
   m_Layer: 0
   m_Name: MonsterManager
-  m_TagString: Untagged
+  m_TagString: MonsterManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -986,6 +1048,7 @@ Transform:
   - {fileID: 5601281818086165238}
   - {fileID: 5601281816954819099}
   - {fileID: 5601281818096305794}
+  - {fileID: 891551488296868336}
   m_Father: {fileID: 5601281817065387377}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1086,6 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc81dbc4d2ba812449f697c05a8cb8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potion: {fileID: 0}
   recipe: []
   animator: {fileID: 5601281817173133459}
 --- !u!114 &5601281817173133470
@@ -1673,6 +1737,7 @@ Transform:
   - {fileID: 5601281817054269893}
   - {fileID: 5601281816007214363}
   - {fileID: 5601281816403038149}
+  - {fileID: 5586863272661124822}
   m_Father: {fileID: 5601281817065387377}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1773,6 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc81dbc4d2ba812449f697c05a8cb8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potion: {fileID: 0}
   recipe: []
   animator: {fileID: 5601281817850015896}
 --- !u!114 &5601281817850015899
@@ -2113,3 +2179,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c47434372683cc4f84474c0ec8387a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8389063397229160455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891551488296868336}
+  m_Layer: 0
+  m_Name: Potion Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891551488296868336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389063397229160455}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5601281817173133465}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

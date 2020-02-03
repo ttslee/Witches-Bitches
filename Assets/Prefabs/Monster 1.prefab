@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc81dbc4d2ba812449f697c05a8cb8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potion: {fileID: 4777406201883476083, guid: 94610cb538aa2364bb09edff0e13b463, type: 3}
+  potionSprite: {fileID: 0}
   recipe: []
   animator: {fileID: 4863374624415788946}
 --- !u!114 &302817656088555777

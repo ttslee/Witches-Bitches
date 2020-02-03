@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MonsterManager : MonoBehaviour
 {
+    // Potion Info
+    private int currentPotion = 0;
     // Cauldron
     private bool cauldronDone = false;
     private bool cauldronTimedOut = false;
     // Recipes/ItemList
-    private int nRecipes = 6;
+    private int nRecipes = 10;
     private int recipeSize = 4;
     private int count = 0;
     private int unfinished_recipes = 0;
@@ -186,7 +188,7 @@ public class MonsterManager : MonoBehaviour
     {
         if (mList.Count != 0)
         {
-            gameObject.transform.Find(mList[monster_num]).GetComponent<Monster>().WakeUp(MyRecipes[count].items, mList[monster_num], monster_num);  // Wakes up a monster and sends it a recipe to complete. 
+            gameObject.transform.Find(mList[monster_num]).GetComponent<Monster>().WakeUp(MyRecipes[count].items, mList[monster_num], monster_num, potionList[currentPotion%4], spriteDictionary);  // Wakes up a monster and sends it a recipe to complete. 
             mAvailableList.Remove(monster_num);
             count++;
             timer.SetTime(rDelay, "MonsterManager");
