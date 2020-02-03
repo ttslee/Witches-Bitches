@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MonsterManager : MonoBehaviour
 {
     // Cauldron
@@ -148,20 +148,21 @@ public class MonsterManager : MonoBehaviour
         if(cauldronDone)
         {
             // Player wins
-            QuitGame();
+            SceneManager.LoadScene("Win");
         }
         else if(cauldronTimedOut)
         {
-            QuitGame();
+            // Player wins
+            SceneManager.LoadScene("Lose");
         }
 
         if(unfinished_recipes == nRecipes)
         {
-            QuitGame();
+            SceneManager.LoadScene("Lose");
             //Player loses
-            print("completed" + completed_recipes);
-            print("unfinished" + unfinished_recipes);
-            print("count" + count);
+            //print("completed" + completed_recipes);
+            //print("unfinished" + unfinished_recipes);
+            //print("count" + count);
         }
         else if (timer.Done)
         {
@@ -183,10 +184,13 @@ public class MonsterManager : MonoBehaviour
 
     private void WakeUpMonster(int monster_num)
     {
-        gameObject.transform.Find(mList[monster_num]).GetComponent<Monster>().WakeUp(MyRecipes[count].items, mList[monster_num], monster_num);  // Wakes up a monster and sends it a recipe to complete. 
-        mAvailableList.Remove(monster_num);
-        count++;
-        timer.SetTime(rDelay, "MonsterManager");
+        if (mList.Count != 0)
+        {
+            gameObject.transform.Find(mList[monster_num]).GetComponent<Monster>().WakeUp(MyRecipes[count].items, mList[monster_num], monster_num);  // Wakes up a monster and sends it a recipe to complete. 
+            mAvailableList.Remove(monster_num);
+            count++;
+            timer.SetTime(rDelay, "MonsterManager");
+        }
     }
 
     public void AlertManager_RecipeComplete(int monster_num)

@@ -226,11 +226,13 @@ public class PlayerController : MonoBehaviour
         if (Element == "FireElement")
         {
             GameObject F = Instantiate(Fire, Item.position, Item.rotation);
+            print(F.name);
             F.GetComponent<ProjectileScript>().SetProjectile((player == 1) ? "Player1" : "Player2", calcLocalPos());
         }  
         else
         {
             GameObject D = Instantiate(Death, Item.position, Item.rotation);
+            print(D.name);
             D.GetComponent<ProjectileScript>().SetProjectile((player == 1) ? "Player1" : "Player2", calcLocalPos());
         }
         canShoot = false;

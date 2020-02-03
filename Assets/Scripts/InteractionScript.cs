@@ -33,7 +33,7 @@ public class InteractionScript : MonoBehaviour
             case "Fire":
             case "Death":
                 GameObject nItem = Instantiate(itemSpawn, transform.position, transform.rotation);
-                nItem.GetComponent<SpriteRenderer>().sprite = (collision.gameObject.name == "Fire") ? itemFire : itemDeath;
+                nItem.GetComponent<SpriteRenderer>().sprite = (collision.gameObject.tag == "Fire") ? itemFire : itemDeath;
                 Destroy(gameObject);
                 break;
                
