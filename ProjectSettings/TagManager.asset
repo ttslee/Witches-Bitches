@@ -18,6 +18,19 @@ TagManager:
   - Bat
   - Rat
   - Skeleton
+  - MonsterManager
+  - red potion
+  - blue potion
+  - green potion
+  - purple potion
+  - red ore
+  - burnt rat
+  - burnt meat
+  - burnt skull
+  - dark ore
+  - rotten rat
+  - rotten meat
+  - rotten skull
   layers:
   - Default
   - TransparentFX
