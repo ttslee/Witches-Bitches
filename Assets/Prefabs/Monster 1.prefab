@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3144544289310482973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2886768757383124324}
+  m_Layer: 0
+  m_Name: PotionSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2886768757383124324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144544289310482973}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4863374624415788947}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4863374624415788945
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +67,7 @@ Transform:
   - {fileID: 1684754214350995744}
   - {fileID: 4500268180005020802}
   - {fileID: 2085640983280928077}
+  - {fileID: 2886768757383124324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -137,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc81dbc4d2ba812449f697c05a8cb8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potionSpawn: {fileID: 3144544289310482973}
   potion: {fileID: 4777406201883476083, guid: 94610cb538aa2364bb09edff0e13b463, type: 3}
-  potionSprite: {fileID: 0}
   recipe: []
   animator: {fileID: 4863374624415788946}
 --- !u!114 &302817656088555777
@@ -301,6 +332,16 @@ PrefabInstance:
     - target: {fileID: 8305303301346973316, guid: 283c2314bf006f54087be15db9ca945d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952000669326455958, guid: 283c2314bf006f54087be15db9ca945d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952000669326455958, guid: 283c2314bf006f54087be15db9ca945d,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

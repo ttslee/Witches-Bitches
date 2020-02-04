@@ -166,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSpawn: {fileID: 4777406201883476083, guid: 94610cb538aa2364bb09edff0e13b463,
     type: 3}
+  tagFire: burnt rat
+  tagDeath: rotten rat
   itemFire: {fileID: 2029542551908640097, guid: 6db934f5df123ce438fcc3e1111fb1d7,
     type: 3}
   itemDeath: {fileID: -3694533877916086887, guid: 6db934f5df123ce438fcc3e1111fb1d7,

@@ -237,6 +237,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7184593217316701058, guid: e3468935cf0d480499820ec669f1e4e6,
     type: 3}
   animator: {fileID: 5696700921488467981}
+  moveSpot: {x: 0, y: 0, z: 0}
   waitTime: 2
   minX: -9.5
   maxX: 9.5
@@ -256,6 +257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSpawn: {fileID: 4777406201883476083, guid: 94610cb538aa2364bb09edff0e13b463,
     type: 3}
+  tagFire: burnt meat
+  tagDeath: rotten meat
   itemFire: {fileID: -4261047623482395726, guid: 6db934f5df123ce438fcc3e1111fb1d7,
     type: 3}
   itemDeath: {fileID: -2821042892349479055, guid: 6db934f5df123ce438fcc3e1111fb1d7,

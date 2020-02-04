@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    public GameObject potionSpawn;
     public GameObject potion;
     private Sprite potionSprite;
+    private string pName;
     //Monster info
     private int monster_num;
 
@@ -59,7 +61,7 @@ public class Monster : MonoBehaviour
 
     //Timer
     private Timer timer;
-    private float waitTime = 25f;
+    private float waitTime = 30f;
     // Start is called before the first frame update
 
     //Animator
@@ -76,6 +78,9 @@ public class Monster : MonoBehaviour
         {
             if (NumItemsLeft == 0)
             {
+                GameObject pot = Instantiate(potion, potionSpawn.transform.position, potionSpawn.transform.rotation);
+                pot.GetComponent<SpriteRenderer>().sprite = potionSprite;
+                pot.tag = pName;
                 gameObject.GetComponentInParent<MonsterManager>().AlertManager_RecipeComplete(monster_num);
                 GetComponentInChildren<MonsterSprite>().RemoveImage();
                 HasRecipe = false;
@@ -103,14 +108,11 @@ public class Monster : MonoBehaviour
             collision.gameObject.GetComponent<ItemPickup>().Kill();
             setFloatingSprite(recipe[currentItem]);
         }
-        else
-        {
-            Spit(collision);
-        }
     }
 
     public void WakeUp(List<string> r, string nm, int mNum, string potionName, Dictionary<string, Sprite> spriteDictionary)
     {
+        pName = potionName;
         potionSprite = spriteDictionary[potionName];
         monster_num = mNum;
         recipe = r;
@@ -118,11 +120,6 @@ public class Monster : MonoBehaviour
         currentItem = 0;
         GetComponent<Timer>().SetTime(waitTime, nm);
         setFloatingSprite(recipe[currentItem]);
-    }
-
-    private void Spit(Collider2D collision)
-    {
-
     }
 
     private void setFloatingSprite(string name)
