@@ -19,7 +19,7 @@ public class ProjectileScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.CompareTag("Bat") | hitInfo.CompareTag("Rat") | hitInfo.CompareTag("Skeleton"))
+        if (hitInfo.CompareTag("Bat") | hitInfo.CompareTag("Rat") | hitInfo.CompareTag("Skeleton") | hitInfo.CompareTag("Rock"))
         {
             if (hitInfo.tag == "Bat")
                 ResourceSpawn.num_bat -= 1;
@@ -27,6 +27,8 @@ public class ProjectileScript : MonoBehaviour
                 ResourceSpawn.num_rat -= 1;
             if (hitInfo.tag == "Skeleton")
                 ResourceSpawn.num_skeleton -= 1;
+            if (hitInfo.tag == "Rock")
+                ResourceSpawn.num_rock -= 1;
             Destroy(hitInfo.gameObject);
         }
         if (hitInfo.name != parent && hitInfo.gameObject.tag != "Item")

@@ -31,6 +31,7 @@ TagManager:
   - rotten rat
   - rotten meat
   - rotten skull
+  - Rock
   layers:
   - Default
   - TransparentFX
