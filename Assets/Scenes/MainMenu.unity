@@ -734,6 +734,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 1716477498427439621, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716477498427439621, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716477498427439622, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Witches''
+
+        Bitches'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716477498427439622, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716477498427439622, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.10679956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716477498427439622, guid: 428a8205724743144bcffdf207ecc3bd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.10679956
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1716477497320110103, guid: 428a8205724743144bcffdf207ecc3bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 428a8205724743144bcffdf207ecc3bd, type: 3}
