@@ -65,39 +65,46 @@ public class PlayerController : MonoBehaviour
             return;
         if (Input.GetKey(KeyCode.Escape))
             QuitGame();
-        movement.x = Input.GetAxisRaw(horizontal);
-        movement.y = Input.GetAxisRaw(vertical);
-        movement = movement.normalized; 
-        animator.SetFloat("Speed", movement.sqrMagnitude);
-        if (movement.x < 0)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        } else if (movement.x > 0)
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
+        if (this.Health > 0) {
+            movement.x = Input.GetAxisRaw(horizontal);
+            movement.y = Input.GetAxisRaw(vertical);
+            movement = movement.normalized; 
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+            if (movement.x < 0)
+            {
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+            } else if (movement.x > 0)
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+        
 
-        switch(player)
-        {
-            case 1:
-                if (Input.GetKeyDown(KeyCode.E) && IsHoldingItem)
-                    Drop();
-                else if (Input.GetKeyDown(KeyCode.Q) && hasElement && canShoot)
-                    Shoot();
-                break;
-            case 2:
-                if (Input.GetKeyDown(KeyCode.RightShift) && IsHoldingItem)
-                    Drop();
-                else if (Input.GetKeyDown(KeyCode.RightControl) && hasElement && canShoot)
-                    Shoot();
-                break;
+            switch(player)
+            {
+                case 1:
+                    if (Input.GetKeyDown(KeyCode.E) && IsHoldingItem)
+                        Drop();
+                    else if (Input.GetKeyDown(KeyCode.Q) && hasElement && canShoot)
+                        Shoot();
+                    break;
+                case 2:
+                    if (Input.GetKeyDown(KeyCode.RightShift) && IsHoldingItem)
+                        Drop();
+                    else if (Input.GetKeyDown(KeyCode.RightControl) && hasElement && canShoot)
+                        Shoot();
+                    break;
+            }
         }
-
+        else {
+            animator.GetComponent<Animator>().enabled = false;
+        }
     }
 
     void FixedUpdate()
     {
-        playerBody.MovePosition(playerBody.position + movement * moveSpd * Time.fixedDeltaTime);
+        if (this.Health > 0) {
+            playerBody.MovePosition(playerBody.position + movement * moveSpd * Time.fixedDeltaTime);
+        }
         if(pickupTimer.Done)
             dropped = false;
         if (shootTimer.Done)
