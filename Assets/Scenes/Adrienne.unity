@@ -479,6 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 1690812899}
   playerTwo: {fileID: 1036378470}
+  deadPlayer: {fileID: 21300000, guid: a25198f8b3892492f910668e61f9ba73, type: 3}
 --- !u!4 &502373658
 Transform:
   m_ObjectHideFlags: 0
