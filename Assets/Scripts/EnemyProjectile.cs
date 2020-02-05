@@ -9,8 +9,11 @@ public class EnemyProjectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.CompareTag("Player1") || hitInfo.CompareTag("Player2"))
+        {
             hitInfo.GetComponent<PlayerController>().TakeDamage();
-        if (hitInfo.gameObject.tag != "Resource" && hitInfo.gameObject.tag != "Item")
+            Destroy(gameObject);
+        }
+        if (hitInfo.gameObject.tag == "Wall")
             Destroy(gameObject);
     }
 }
