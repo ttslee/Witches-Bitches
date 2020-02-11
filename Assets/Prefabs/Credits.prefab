@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7060223, g: 0.754717, b: 0.33107865, a: 1}
+  m_Color: {r: 0.41153273, g: 0.7830189, b: 0.28439835, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7264151, g: 0.5165754, b: 0.11307406, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6897906, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -386,7 +386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Johnny - Programming, Art, Design
+  m_Text: Johnny Ngo - Programming, Art, Design
 --- !u!1 &4579487273251858545
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nam - Programming, Design
+  m_Text: Nam-giao nguyen - Programming, Design
 --- !u!1 &4657720158183512250
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23985404, g: 0.6603774, b: 0.5842878, a: 1}
+  m_Color: {r: 0.28835887, g: 0.754717, b: 0.67190576, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -540,7 +540,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Adrienne - Programming, Design
+  m_Text: Adrienne Caparaz - Programming, Design
 --- !u!1 &6490780503509623351
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,4 +824,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Teo Lee - Programming, Sound, Design
+  m_Text: Theodore Lee - Programming, Sound, Design
