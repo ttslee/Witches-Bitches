@@ -16,17 +16,15 @@ public class Timer_UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = GameObject.Find("Canvas/TimerCanvas/Timer").GetComponent<Text>();
+        text = GameObject.Find("TimerUI/TimerCanvas/Timer").GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {  
         TimeCount();
-        JumpSense();
     }
 
-    #region Function
     private void TimeCount() 
     {
         t = t - Time.deltaTime;
@@ -43,17 +41,4 @@ public class Timer_UI : MonoBehaviour
         text.text = "Time: "+time.ToString();
     }
 
-    private void JumpSense() 
-    {
-        if (time <= 0)
-        {
-            SceneManager.LoadScene("Win");
-        }
-
-        //else
-        //{
-       //     SceneManager.LoadScene("Lose");
-      //  }
-    }
-    #endregion
 }
