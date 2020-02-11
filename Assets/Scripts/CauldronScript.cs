@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CauldronScript : MonoBehaviour
 {
     //Recipe info
-    private int currentItem;
+    private int currentItem = 0;
 
     private bool hasRecipe = false;
 
@@ -37,7 +37,7 @@ public class CauldronScript : MonoBehaviour
         }
     }
 
-    private int numItemsLeft = 5;
+    private int numItemsLeft = 4;
 
     public int NumItemsLeft
     {
@@ -73,17 +73,21 @@ public class CauldronScript : MonoBehaviour
             {
                 gameObject.GetComponentInParent<MonsterManager>().AlertManager_CauldronRecipeComplete();
                 GetComponentInChildren<MonsterSprite>().RemoveImage();
+                SceneManager.LoadScene("Win");
             }
             else if (timer.Done && NumItemsLeft > 0)
             {
                 gameObject.GetComponentInParent<MonsterManager>().AlertManager_CauldronTimedOut();
                 GetComponentInChildren<MonsterSprite>().RemoveImage();
+                SceneManager.LoadScene("Lose");
             }
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision) // Pick up the correct item
     {
+        print(collision.name);
+        print(recipe[currentItem]);
         if (!HasRecipe)
             return;
         if (collision.name == recipe[currentItem])
@@ -92,10 +96,6 @@ public class CauldronScript : MonoBehaviour
             currentItem++;
             collision.gameObject.GetComponent<ItemPickup>().Kill();
             setFloatingSprite(recipe[currentItem]);
-        }
-        else
-        {
-            Spit(collision);
         }
     }
 
@@ -107,11 +107,7 @@ public class CauldronScript : MonoBehaviour
         GetComponent<Timer>().SetTime(waitTime, "Cauldron");
         setFloatingSprite(recipe[currentItem]);
     }
-
-    private void Spit(Collider2D collision)
-    {
-
-    }
+    
 
     private void setFloatingSprite(string name)
     {

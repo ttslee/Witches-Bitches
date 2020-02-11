@@ -61,7 +61,7 @@ public class Monster : MonoBehaviour
 
     //Timer
     private Timer timer;
-    private float waitTime = 30f;
+    private float waitTime = 50f;
     // Start is called before the first frame update
 
     //Animator
@@ -80,10 +80,11 @@ public class Monster : MonoBehaviour
             {
                 GameObject pot = Instantiate(potion, potionSpawn.transform.position, potionSpawn.transform.rotation);
                 pot.GetComponent<SpriteRenderer>().sprite = potionSprite;
-                pot.tag = pName;
+                pot.name = pName;
                 gameObject.GetComponentInParent<MonsterManager>().AlertManager_RecipeComplete(monster_num);
                 GetComponentInChildren<MonsterSprite>().RemoveImage();
                 HasRecipe = false;
+                timer.Done = true;
             }
             if(timer.Done && NumItemsLeft > 0)
             {

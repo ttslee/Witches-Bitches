@@ -109,7 +109,6 @@ public class MonsterManager : MonoBehaviour
         ShuffleList<string>(potionList);
         ShuffleList<int>(mAvailableList);
         WakeUpMonster(mAvailableList[0]);
-        print("ok");
         WakeUpCauldron();
     }
 
@@ -182,7 +181,6 @@ public class MonsterManager : MonoBehaviour
     // Wake up monster and pass it a recipe to complete
     private void WakeUpCauldron()
     {
-        print("here");
         gameObject.transform.Find("Cauldron").GetComponent<CauldronScript>().WakeUp(potionList);
     }
 
