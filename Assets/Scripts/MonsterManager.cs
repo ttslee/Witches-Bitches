@@ -10,7 +10,7 @@ public class MonsterManager : MonoBehaviour
     private bool cauldronDone = false;
     private bool cauldronTimedOut = false;
     // Recipes/ItemList
-    private int nRecipes = 10;
+    private int nRecipes = 6;
     private int recipeSize = 4;
     private int count = 0;
     private int unfinished_recipes = 0;
@@ -109,6 +109,7 @@ public class MonsterManager : MonoBehaviour
         ShuffleList<string>(potionList);
         ShuffleList<int>(mAvailableList);
         WakeUpMonster(mAvailableList[0]);
+        print("ok");
         WakeUpCauldron();
     }
 
@@ -181,6 +182,7 @@ public class MonsterManager : MonoBehaviour
     // Wake up monster and pass it a recipe to complete
     private void WakeUpCauldron()
     {
+        print("here");
         gameObject.transform.Find("Cauldron").GetComponent<CauldronScript>().WakeUp(potionList);
     }
 

@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     //Player
     public int player = 1;
-    private int health = 3;
+    private int health = 50;
 
     public int Health
     {
