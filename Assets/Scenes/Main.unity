@@ -234,8 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a713a9ec4fc614fdd8e4a1fe13c1ef9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
+  playerOne: {fileID: 481881459}
+  playerTwo: {fileID: 1397815641}
   deadPlayer: {fileID: 21300000, guid: a25198f8b3892492f910668e61f9ba73, type: 3}
 --- !u!4 &68438425
 Transform:
