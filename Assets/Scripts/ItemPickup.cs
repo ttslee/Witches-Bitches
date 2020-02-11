@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour
 {
-    private int holder = 0;
+    public int holder = 0;
     private bool dropped = false;
     private string direction;
     private SpriteRenderer image;

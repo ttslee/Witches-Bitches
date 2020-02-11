@@ -37,7 +37,8 @@ public class CauldronScript : MonoBehaviour
         }
     }
 
-    private int numItemsLeft = 4;
+    private int startNumItems = 4;
+    private int numItemsLeft;
 
     public int NumItemsLeft
     {
@@ -61,6 +62,7 @@ public class CauldronScript : MonoBehaviour
     //public Animator animator;
     void Start()
     {
+        NumItemsLeft = startNumItems;
         timer = gameObject.GetComponent<Timer>();
     }
 
@@ -86,12 +88,14 @@ public class CauldronScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) // Pick up the correct item
     {
-        print(collision.name);
-        print(recipe[currentItem]);
         if (!HasRecipe)
+            return;
+        if (currentItem >= recipe.Count)
             return;
         if (collision.name == recipe[currentItem])
         {
+            if (collision.GetComponent<ItemPickup>().Holder != 0)
+                return;
             NumItemsLeft -= 1;
             currentItem++;
             collision.gameObject.GetComponent<ItemPickup>().Kill();
@@ -104,6 +108,7 @@ public class CauldronScript : MonoBehaviour
     {
         Recipe = r;
         HasRecipe = true;
+        NumItemsLeft = startNumItems;
         currentItem = 0;
         GetComponent<Timer>().SetTime(waitTime, "Cauldron");
         setFloatingSprite(recipe[currentItem]);

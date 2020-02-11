@@ -43,8 +43,8 @@ public class Monster : MonoBehaviour
             recipe = value;
         }
     }
-
-    private int numItemsLeft = 4;
+    private int startNumItems = 4;
+    private int numItemsLeft;
 
     public int NumItemsLeft
     {
@@ -68,6 +68,7 @@ public class Monster : MonoBehaviour
     public Animator animator;
     void Start()
     {
+        NumItemsLeft = startNumItems;
         timer = gameObject.GetComponent<Timer>();   
     }
 
@@ -98,12 +99,16 @@ public class Monster : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision) // Pick up the correct item
+    private void OnTriggerEnter2D(Collider2D collision) // Pick up the correct item
     {
         if (!HasRecipe)
             return;
-        if(collision.name == recipe[currentItem])
+        if (currentItem >= recipe.Count)
+            return;
+        if (collision.name == recipe[currentItem])
         {
+            //if (collision.GetComponent<ItemPickup>().Holder != 0)
+            //    return;
             NumItemsLeft -= 1;
             currentItem++;
             animator.SetTrigger("Chomp");
@@ -115,6 +120,7 @@ public class Monster : MonoBehaviour
 
     public void WakeUp(List<string> r, string nm, int mNum, string potionName, Dictionary<string, Sprite> spriteDictionary)
     {
+        numItemsLeft = startNumItems;
         pName = potionName;
         potionSprite = spriteDictionary[potionName];
         monster_num = mNum;
