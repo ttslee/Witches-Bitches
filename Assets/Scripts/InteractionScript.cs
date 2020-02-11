@@ -28,7 +28,7 @@ public class InteractionScript : MonoBehaviour
         { 
             case "Player1":
             case "Player2":
-                if(gameObject.name != "Rock")
+                if(gameObject.tag == "Skeleton")
                     collision.gameObject.GetComponent<PlayerController>().TakeDamage();
                 break;
             case "Fire":
