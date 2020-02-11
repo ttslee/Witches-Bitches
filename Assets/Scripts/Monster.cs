@@ -85,6 +85,7 @@ public class Monster : MonoBehaviour
                 GetComponentInChildren<MonsterSprite>().RemoveImage();
                 HasRecipe = false;
                 timer.Done = true;
+                return;
             }
             if(timer.Done && NumItemsLeft > 0)
             {
@@ -107,7 +108,8 @@ public class Monster : MonoBehaviour
             currentItem++;
             animator.SetTrigger("Chomp");
             collision.gameObject.GetComponent<ItemPickup>().Kill();
-            setFloatingSprite(recipe[currentItem]);
+            if(numItemsLeft != 0)
+                setFloatingSprite(recipe[currentItem]);
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class CauldronScript : MonoBehaviour
 {
     //Recipe info
-    private int currentItem = 0;
+    public int currentItem = 0;
 
     private bool hasRecipe = false;
 
@@ -84,7 +84,7 @@ public class CauldronScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision) // Pick up the correct item
+    private void OnTriggerEnter2D(Collider2D collision) // Pick up the correct item
     {
         print(collision.name);
         print(recipe[currentItem]);
@@ -95,7 +95,8 @@ public class CauldronScript : MonoBehaviour
             NumItemsLeft -= 1;
             currentItem++;
             collision.gameObject.GetComponent<ItemPickup>().Kill();
-            setFloatingSprite(recipe[currentItem]);
+            if(numItemsLeft != 0)
+                setFloatingSprite(recipe[currentItem]);
         }
     }
 
