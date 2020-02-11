@@ -23,8 +23,10 @@ public class Timer_UI : MonoBehaviour
     void Update()
     {  
         TimeCount();
+        Losebytime0();
     }
 
+    #region Function
     private void TimeCount() 
     {
         t = t - Time.deltaTime;
@@ -41,4 +43,12 @@ public class Timer_UI : MonoBehaviour
         text.text = "Time: "+time.ToString();
     }
 
+    private void Losebytime0() 
+    {
+        if (time <= 0) 
+        {
+            SceneManager.LoadScene("Lose");
+        }
+    }
+    #endregion
 }
