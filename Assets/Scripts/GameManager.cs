@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate() {
         if (playerTwo.Health <= 0 && playerOne.Health <= 0) {
+            SoundManager.Instance.MusicSource.Stop();
             GameOver();
         }
         else if (playerTwo.Health <= 0) {

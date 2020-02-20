@@ -22,7 +22,7 @@ public class PauseManager : MonoBehaviour
 
         //uses the p button to pause and unpause the game
         if (Input.GetKeyDown(KeyCode.P))
-        {
+        { 
             pauseControl();
         }
     }
@@ -33,11 +33,13 @@ public class PauseManager : MonoBehaviour
     {
         if (Time.timeScale == 1)
         {
+            SoundManager.Instance.MusicSource.Pause();
             Time.timeScale = 0;
             showPaused();
         }
         else if (Time.timeScale == 0)
         {
+            SoundManager.Instance.MusicSource.UnPause();
             Time.timeScale = 1;
             hidePaused();
         }
