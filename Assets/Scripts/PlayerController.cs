@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour
             }
         }
         else {
+            if (IsHoldingItem)
+                Drop();
             animator.GetComponent<Animator>().enabled = false;
         }
     }
@@ -163,7 +165,8 @@ public class PlayerController : MonoBehaviour
         Element = "";
         it = null;
         Item = null;
-        TimerStart(pickupTimer, 0.8f);
+        if (this.Health > 0)
+            TimerStart(pickupTimer, 0.8f);
     }
 
     private void PickUp(Collider2D collision)
