@@ -159,6 +159,7 @@ public class PlayerController : MonoBehaviour
     {
         Item.parent = null;
         it.GetComponent<ItemPickup>().Drop(calcLocalPos());
+        it.GetComponent<SpriteRenderer>().sortingOrder = 2;
         dropped = true;
         IsHoldingItem = false;
         hasElement = false;
